@@ -1,10 +1,9 @@
 package soccer;
 
-import java.util.*;
-
 public class League {
 
     public static void main(String[] args) {
+
 
 
         Team[] theTeams = createTeams();
@@ -56,24 +55,33 @@ public class League {
 
 
 
-        for (Player thePlayer: theTeams[1].playerArray) {
-            System.out.println(thePlayer.playerName);
-        }
-
+//        for (Player thePlayer: theTeams[1].playerArray) {
+//            System.out.println(thePlayer.playerName);
+//
+//
+//        }
+//        System.out.println("........................................");
 
 
 
         // Creating and populating  home and away team attributes
         Game currGame = theGames[0];
 
-        int numberOfGoals = (int)(Math.random() * 7);
-        Goal[] theGoals = new Goal[numberOfGoals];
-        //System.out.println(theGoals.length);
+        currGame.playGame();
 
 
-        currGame.goals = theGoals;
 
-        GameUtils.addGameGoals(currGame);
+//        for (Goal currGoal: currGame.goals) {
+//            System.out.println("Goal scored after " +
+//                    currGoal.theTime + " mins by " +
+//                    currGoal.thePlayer.playerName +
+//                    " of " + currGoal.theTeam.teamName);
+//
+//
+//        }
+//
+//        System.out.println("...........................");
+
 
         // Creating goal object
 //        Goal goal1 = new Goal();
@@ -99,22 +107,28 @@ public class League {
                 System.out.println("Last name is " +
                         thePlayer.playerName.split(" ")[1]);
             }
+
         }
+        System.out.println("..................................");
 
         //Instatiating string builder
         StringBuilder familyNameFirst = new StringBuilder();
 
-        for (Player thePlayer: theTeams[0].playerArray) {
-            String name[] = thePlayer.playerName.split(" ");
-            familyNameFirst.append(name[1]);
-            familyNameFirst.append(", ");
-            familyNameFirst.append(name[0]);
-
-            System.out.println(familyNameFirst);
-            familyNameFirst.delete(0, familyNameFirst.length());
-        }
 
 
+//        for (Player thePlayer: theTeams[0].playerArray) {
+//            String name[] = thePlayer.playerName.split(" ");
+//            familyNameFirst.append(name[1]);
+//            familyNameFirst.append(", ");
+//            familyNameFirst.append(name[0]);
+//
+//            System.out.println(familyNameFirst);
+//            familyNameFirst.delete(0, familyNameFirst.length());
+//        }
+
+
+
+        System.out.println(currGame.getDescription());
 
 
 
